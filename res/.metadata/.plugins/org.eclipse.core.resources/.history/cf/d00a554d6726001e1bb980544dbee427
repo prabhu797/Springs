@@ -1,0 +1,22 @@
+package com.restaurant.serviceimpl;
+
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.restaurant.service.CategoryService;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+
+	@Override
+	public ResponseEntity<String> addNewCategory(Map<String, String> requestMap) {
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

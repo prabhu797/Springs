@@ -1,0 +1,26 @@
+package com.restaurant.serviceimpl;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.restaurant.dao.CategoryDao;
+import com.restaurant.service.CategoryService;
+
+@Service
+public class CategoryServiceImpl implements CategoryService {
+
+	@Autowired
+	CategoryDao categoryDao;
+	@Override
+	public ResponseEntity<String> addNewCategory(Map<String, String> requestMap) {
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.restaurant.restimpl;
+
+import com.restaurant.rest.UserRest;
+
+public class UserRestImpl implements UserRest {
+
+}

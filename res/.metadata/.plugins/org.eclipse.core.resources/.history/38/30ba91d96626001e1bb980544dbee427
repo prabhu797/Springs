@@ -1,0 +1,10 @@
+package com.restaurant.restimpl;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.restaurant.rest.CategoryRest;
+
+@RestController
+public class CategoryRestImpl implements CategoryRest {
+
+}

@@ -1,0 +1,9 @@
+package com.restaurant.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.restaurant.model.Product;
+
+public interface ProductDao extends JpaRepository<Product, Integer> {
+
+}

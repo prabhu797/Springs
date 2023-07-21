@@ -1,0 +1,27 @@
+package com.restaurant.restimpl;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.restaurant.rest.ProductRest;
+import com.restaurant.service.ProductService;
+
+@RestController
+public class ProductRestImpl implements ProductRest {
+
+	@Autowired
+	ProductService productService;
+	
+	@Override
+	public ResponseEntity<String> addNewProduct(Map<String, String> requMap) {
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
