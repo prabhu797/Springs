@@ -1,0 +1,8 @@
+package com.restaurant.wrapper;
+
+import lombok.Data;
+
+@Data
+public class ProductWrapper {
+
+}

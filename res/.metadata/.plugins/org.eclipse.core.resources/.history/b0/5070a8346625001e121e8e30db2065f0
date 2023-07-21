@@ -1,0 +1,9 @@
+package com.restaurant.jwt;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class JwtUtil {
+
+	private String secret = "P0r7a0B9h1u9D9e7v";
+}

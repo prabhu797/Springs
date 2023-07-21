@@ -1,0 +1,24 @@
+package com.restaurant.jwt;
+
+import java.util.function.Function;
+
+import org.springframework.stereotype.Service;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+
+@Service
+public class JwtUtil {
+
+	private String secret = "P0r7a0B9h1u9D9e7v";
+	
+	public <T> T extractClaims(String token, Function<Claims, T> claimsResolver) {
+		final Claims claims = 
+	}
+	
+	public Claims extractAllClaims(String token) {
+		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+	}
+	
+	
+}

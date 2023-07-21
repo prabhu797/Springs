@@ -1,0 +1,26 @@
+package com.restaurant.jwt;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class JwtUtil {
+
+	﻿
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+	http.cors().configurationSource (request -> new CorsConfiguration().applyPermitDefaultValues())
+	.and()
+	.csrf().disable()
+	.authorizeRequests ()
+	.antMatchers("/user/login", "/user/signup","/user/forgotPassword")
+	.permitAll() 
+	.anyRequest() 
+	.authenticated()
+	.and(HttpSecurity
+	.sessionManagement()
+	.sessionCreationPolicy (SessionCreationPolicy.STATELESS);
+	
+	http.addFilterBefore( UsernamePasswordAuthenticationFilter.class);
+	}
+}
