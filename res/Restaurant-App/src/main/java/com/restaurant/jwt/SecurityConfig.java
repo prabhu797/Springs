@@ -14,9 +14,11 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SuppressWarnings("deprecation")
 @Configuration
+@EnableWebMvc
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -50,6 +52,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.csrf().disable()
 		.authorizeRequests()
 		.antMatchers("/user/login","/user/signup","/user/forgotPassword")
+		.permitAll()
+		.antMatchers("/v3/api-docs","/v2/api-docs","/swagger-ui/**","/swagger-resources/**","/webjars/**")
 		.permitAll()
 		.anyRequest()
 		.authenticated()
